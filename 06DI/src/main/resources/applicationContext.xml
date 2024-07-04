@@ -55,4 +55,17 @@
         <property name="address" value="西安"/>
     </bean>
 
+<!--    Bean的作用域-->
+<!--    单例模式-->
+    <bean id = "user_singleton" class="com.daodao.zuoYongYu.User" scope="singleton">
+        <property name="username" value="无名"/>
+        <property name="age" value="0"/>
+    </bean>
+
+<!--    原型模式-->
+    <bean id = "user_prototype" class="com.daodao.zuoYongYu.User" scope="prototype">
+        <property name="username" value="无名"/>
+        <property name="age" value="0"/>
+    </bean>
+
 </beans>
