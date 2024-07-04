@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="com.daodao.pojo.Student">
+        <property name="name" value="小明"/>
+<!--        类注入-->
+        <property name="address" ref="address"/>
+<!--        数组注入-->
+        <property name="books">
+            <array>
+                <value>西游记</value>
+                <value>红楼梦</value>
+                <value>水浒传</value>
+            </array>
+        </property>
+<!--        List注入-->
+        <property name="hobbys">
+            <list>
+                <value>listen music</value>
+                <value>看电影</value>
+            </list>
+        </property>
+<!--        Map注入-->
+        <property name="card">
+            <map>
+                <entry key="中国邮政" value="1231231"/>
+                <entry key="hahaha" value="啊啊啊"/>
+            </map>
+        </property>
+<!--        set注入-->
+        <property name="games">
+            <set>
+                <value>lol</value>
+                <value>bbc</value>
+                <value>bbc</value>
+            </set>
+        </property>
+        <!--            Null注入-->
+        <property name="wife">
+            <null/>
+        </property>
+<!--        Properties注入-->
+        <property name="info">
+            <props>
+                <prop key="学号">234234234</prop>
+                <prop key="性别">男</prop>
+                <prop key="姓名">小明</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="address" class="com.daodao.pojo.Address">
+        <property name="address" value="西安"/>
+    </bean>
+
+</beans>

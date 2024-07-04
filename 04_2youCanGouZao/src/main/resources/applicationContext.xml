@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--&lt;!&ndash;    第一种根据index参数下标进行设置&ndash;&gt;-->
+<!--    <bean id="user" class="com.daodao.pojo.User">-->
+<!--&lt;!&ndash;        index指构造方法，下标从0开始&ndash;&gt;-->
+<!--        <constructor-arg index="0" value="name method-1"/>-->
+<!--    </bean>-->
+
+<!--    第二种根据参数名字进行设置-->
+    <bean id="user" class="com.daodao.pojo.User">
+<!--        name指的是参数名-->
+        <constructor-arg name="name" value="name method-2"/>
+    </bean>
+
+<!--&lt;!&ndash;    第三种根据参数类型设置&ndash;&gt;-->
+<!--    <bean id="user" class="com.daodao.pojo.User">-->
+<!--        <constructor-arg type="java.lang.String" value="name method-3"/>-->
+<!--    </bean>-->
+</beans>

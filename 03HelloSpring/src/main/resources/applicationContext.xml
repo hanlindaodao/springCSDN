@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--bean就时Java对象，由Spring创建和管理-->
+    <bean id="hello1" class="com.daodao.Hello">
+        <!--这里的name是set和get后边的东西，可以试试改一改setName和getName-->
+        <property name="name" value="Spring"/>
+    </bean>
+
+    <bean id="DaoImpl" class="com.daodao.dao.impl.UserDaoImpl"/>
+    <bean id="MySqlImpl" class="com.daodao.dao.impl.UserDaoMySqlImpl"/>
+    <bean id="OracleImpl" class="com.daodao.dao.impl.UserDaoOracleImpl"/>
+
+    <bean id="ServiceImpl" class="com.daodao.service.impl.UserServiceImpl">
+        <!--注意：这里的name并不是属性，而是set方法后的那部分，且首字母小写-->
+        <!--注意：引用另一个bean不使用value，使用ref-->
+        <property name="userDao" ref="OracleImpl"/>
+    </bean>
+
+</beans>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user" name="user1, u1, uu1" class="com.daodao.pojo.User">
+        <property name="name" value="this is a new name"/>
+    </bean>
+
+    <alias name="user" alias="user2"/>
+</beans>
